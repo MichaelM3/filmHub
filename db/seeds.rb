@@ -22,7 +22,16 @@ def faker_movie_actor_info
     newMovieActor = MovieActor.find_or_create_by(movie_id: randMovieId, actor_id: randActorId, salary_from_movie: randSalaryFromMovie)
 end
 
-faker_actor_info()
-faker_movie_info()
-faker_movie_actor_info()
+20.times do
+    faker_movie_info()
+end
+
+30.times do
+    faker_actor_info()
+end
+
+20.times do
+    faker_movie_actor_info()
+end
+
 puts("Finished Seeding")
